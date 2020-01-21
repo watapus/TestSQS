@@ -31,8 +31,6 @@ func main() {
 		out2 <- RecieveMessage()
 	}()
 	f2(<-out1, <-out2)
-
-	go RecieveMessage()
 }
 
 func f2(arg1 error, arg2 string) {
